@@ -98,7 +98,7 @@ git pull upstream develop
 Now that our **local** develop branch is in sync with **remote** develop branch (of the Real Dev Squad Repository), we should let our branch know about the changes from the develop branch (if any). To do so we first checkout to our branch:
 
 ```
-git checkout <branch-name>
+git checkout -b <branch-name>
 ```
 
 Once we're in our branch, we **rebase** our branch on top of the current develop branch (we change the base of our branch, so that it appears as if we have worked from the time the latest changes were merged in the develop branch). To do so:
@@ -114,7 +114,7 @@ You should solve the merge conflicts, if any.
 Now it is the time to push the changes of your local develop branch to your fork of the repository which is on Github (which we cloned in step 2).
 
 ```
-git push origin
+git push origin <branch-name>
 ```
 
 10. **Pull request**
